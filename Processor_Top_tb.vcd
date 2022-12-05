@@ -1,0 +1,251 @@
+$date
+	Mon Dec 05 00:27:47 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module Processor_Top_tb $end
+$var reg 1 ! clk $end
+$var reg 1 " rst_n $end
+$scope module uut $end
+$var wire 1 ! clk $end
+$var wire 1 " rst_n $end
+$var wire 1 # zero_out $end
+$var wire 32 $ sign_ext_out [31:0] $end
+$var wire 32 % read_data2 [31:0] $end
+$var wire 32 & read_data1 [31:0] $end
+$var wire 32 ' out_address [31:0] $end
+$var wire 32 ( instrn [31:0] $end
+$var wire 1 ) final_write_en $end
+$var wire 32 * datamem_read_data [31:0] $end
+$var wire 1 + ctrl_write_en $end
+$var wire 5 , ctrl_write_addr [4:0] $end
+$var wire 32 - ctrl_regwrite_data [31:0] $end
+$var wire 32 . ctrl_in_address [31:0] $end
+$var wire 1 / ctrl_datamem_write_en $end
+$var wire 32 0 ctrl_aluin2 [31:0] $end
+$var wire 32 1 branch_address [31:0] $end
+$var wire 32 2 branch_addr_offset [31:0] $end
+$var wire 32 3 alu_result [31:0] $end
+$var wire 32 4 address_plus_4 [31:0] $end
+$var wire 32 5 addr_incr [31:0] $end
+$scope module adder_branch_addr $end
+$var wire 32 6 in1 [31:0] $end
+$var wire 32 7 temp [31:0] $end
+$var wire 1 8 out $end
+$var wire 32 9 in2 [31:0] $end
+$upscope $end
+$scope module adder_next_addr $end
+$var wire 32 : in2 [31:0] $end
+$var wire 32 ; temp [31:0] $end
+$var wire 1 < out $end
+$var wire 32 = in1 [31:0] $end
+$upscope $end
+$scope module alu $end
+$var wire 6 > func_field [5:0] $end
+$var wire 6 ? opcode [5:0] $end
+$var wire 1 # zero $end
+$var wire 32 @ result [31:0] $end
+$var wire 3 A alu_control [2:0] $end
+$var wire 32 B B [31:0] $end
+$var wire 32 C A [31:0] $end
+$scope module alu_core_inst $end
+$var wire 1 # zero $end
+$var wire 3 D alu_control [2:0] $end
+$var wire 32 E B [31:0] $end
+$var wire 32 F A [31:0] $end
+$var reg 32 G result [31:0] $end
+$upscope $end
+$scope module alu_ctrlr_inst $end
+$var wire 6 H func_field [5:0] $end
+$var wire 6 I opcode [5:0] $end
+$var reg 3 J alu_control [2:0] $end
+$var reg 3 K func_code [2:0] $end
+$upscope $end
+$upscope $end
+$scope module ctrl_logic $end
+$var wire 32 L address_plus_4 [31:0] $end
+$var wire 32 M alu_result [31:0] $end
+$var wire 32 N branch_address [31:0] $end
+$var wire 1 + ctrl_write_en $end
+$var wire 6 O instrn_opcode [5:0] $end
+$var wire 1 # zero_out $end
+$var wire 32 P sign_ext_out [31:0] $end
+$var wire 32 Q read_data2 [31:0] $end
+$var wire 32 R instrn [31:0] $end
+$var wire 32 S datamem_read_data [31:0] $end
+$var wire 5 T ctrl_write_addr [4:0] $end
+$var wire 32 U ctrl_regwrite_data [31:0] $end
+$var wire 32 V ctrl_in_address [31:0] $end
+$var wire 1 / ctrl_datamem_write_en $end
+$var wire 32 W ctrl_aluin2 [31:0] $end
+$upscope $end
+$scope module data_mem $end
+$var wire 32 X address [31:0] $end
+$var wire 1 ! clk $end
+$var wire 1 / write_en $end
+$var wire 32 Y write_data [31:0] $end
+$var wire 32 Z read_data [31:0] $end
+$upscope $end
+$scope module instr_mem $end
+$var wire 32 [ instrn_address [31:0] $end
+$var wire 32 \ instrn [31:0] $end
+$upscope $end
+$scope module prg_cntr $end
+$var wire 1 ! clk $end
+$var wire 32 ] in_address [31:0] $end
+$var wire 1 " rst_n $end
+$var reg 32 ^ out_address [31:0] $end
+$upscope $end
+$scope module regfile $end
+$var wire 1 ! clk $end
+$var wire 5 _ read_addr1 [4:0] $end
+$var wire 5 ` read_addr2 [4:0] $end
+$var wire 32 a read_data1 [31:0] $end
+$var wire 32 b read_data2 [31:0] $end
+$var wire 1 " rst_n $end
+$var wire 5 c write_addr [4:0] $end
+$var wire 32 d write_data [31:0] $end
+$var wire 1 ) write_en $end
+$upscope $end
+$scope module shifter $end
+$var wire 32 e outdata [31:0] $end
+$var wire 2 f shift_amt [1:0] $end
+$var wire 1 g shift_left $end
+$var wire 32 h indata [31:0] $end
+$upscope $end
+$scope module sign_ext $end
+$var wire 16 i bits16_in [15:0] $end
+$var wire 32 j bits32_out [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b101100000100000 j
+b101100000100000 i
+b101100000100000 h
+1g
+b10 f
+b10110000010000000 e
+b110011 d
+b1011 c
+b100010 b
+b10001 a
+b1010 `
+b1001 _
+b0 ^
+b0 ]
+b1001010100101100000100000 \
+b0 [
+bx Z
+b100010 Y
+b110011 X
+b100010 W
+b0 V
+b110011 U
+b1011 T
+bx S
+b1001010100101100000100000 R
+b100010 Q
+b101100000100000 P
+b0 O
+b0 N
+b110011 M
+b0 L
+b0 K
+b0 J
+b0 I
+b100000 H
+b110011 G
+b10001 F
+b100010 E
+b0 D
+b10001 C
+b100010 B
+b0 A
+b110011 @
+b0 ?
+b100000 >
+b0 =
+0<
+b0 ;
+b0 :
+b10110000010000000 9
+08
+b10110000010000000 7
+b0 6
+b0 5
+b0 4
+b110011 3
+b10110000010000000 2
+b0 1
+b100010 0
+0/
+b0 .
+b110011 -
+b1011 ,
+1+
+bx *
+0)
+b1001010100101100000100000 (
+b0 '
+b10001 &
+b100010 %
+b101100000100000 $
+0#
+0"
+1!
+$end
+#5
+0!
+#10
+1!
+#15
+0!
+#20
+1!
+#25
+0!
+#30
+b100 ;
+b100 5
+b100 :
+1)
+1!
+1"
+#35
+0!
+#40
+1!
+#45
+0!
+#50
+1!
+#55
+0!
+#60
+1!
+#65
+0!
+#70
+1!
+#75
+0!
+#80
+1!
+#85
+0!
+#90
+1!
+#95
+0!
+#100
+1!

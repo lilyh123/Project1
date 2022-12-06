@@ -26,3 +26,7 @@ that simulates clock and reset.
 
 We attempted to try implement 5-stage pipelining but we cannot figure
 out how to execute the code.
+
+Resources : https://electrobinary.blogspot.com/search?q=ALU 
+	    https://www.fpga4student.com/2017/01/verilog-code-for-single-cycle-MIPS-processor.html
+	    https://github.com/maze1377/pipeline-mips-verilog
